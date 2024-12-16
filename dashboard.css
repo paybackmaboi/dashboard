@@ -1,0 +1,507 @@
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #dfebf6;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 23px;
+}
+
+.profile-text {
+    margin-left: 10px; /* Adjust this value as needed */
+}
+
+.profile h4, .profile p {
+    margin: 0;
+}
+
+.navbar2 {
+    width: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical alignment */
+    padding: 0px 25px;
+    background-color: #081826;
+    color: white;
+}
+
+
+#navbar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Navbar list styling */
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin: 10px 0;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+#navbar ul li a.active {
+    background-color: #575757; /* Same as hover */
+}
+
+#navbar ul li a:hover {
+    background-color: #575757;
+}
+
+.navbar2 a.icon {
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    text-decoration: none; /* Removes the underline */
+    background-color: transparent; /* Ensures no background color */
+}
+
+.navbar2 a.icon i {
+    color: white; /* Makes the hamburger icon white */
+    font-size: 24px; /* Adjust icon size if needed */
+}
+
+.navbar2 a.icon:hover {
+    background-color: transparent; /* Prevents background color change on hover */
+}
+
+.navbar2 a.icon:focus,
+.navbar2 a.icon:active {
+    outline: none; /* Removes any focus outline when clicked */
+}
+
+/* Styling for the navbar and hamburger icon */
+.navbar2 a.icon {
+    display: block;
+}
+
+.logout {
+    background-color: #e74c3c;
+}
+
+#systemContent {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center;
+    margin: 25px;
+    padding: 25px;
+    margin-left: 220px; /* Offset the width of the fixed navbar */
+}
+
+#dashBoard {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 55px;
+    grid-row-gap: 25px;
+    visibility: visible; /* Default state is visible */
+    opacity: 1;
+    transition: opacity 0.3s ease; /* Add a smooth transition for visibility changes */
+}
+
+.hidden {
+    visibility: hidden; /* Hides the content but keeps its layout */
+    opacity: 0;         /* Smooth transition effect */
+    transition: opacity 0.3s ease;
+}
+
+
+.grid1 h3, h1, .grid2 h3, h1, .grid3 h3, h1 {
+    padding: 8px;
+    margin: 8px;
+}
+
+.grid1 { background-color: skyblue; border-radius: 8px; }
+.grid2 { background-color: rgb(235, 225, 135); border-radius: 8px; }
+.grid3 { background-color: aquamarine; border-radius: 8px; }
+
+#studentTable, #programContent, #sectionContent, #violationContent, #academicYearContent {
+    visibility: visible; /* Default state is visible */
+    opacity: 1;
+    transition: opacity 0.3s ease; /* Add a smooth transition for visibility changes */
+    display: none;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #081826;
+    color: white;
+    font-weight: bold;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.btn-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+.btn-info {
+    background-color: #2196F3;
+    color: white;
+}
+
+
+#addNew, #createNew {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    float: right;
+}
+
+#addNew:hover, #createNew:hover {
+    background-color: #2980b9;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.form-close {
+    color: #e8e0e0;
+    font-size: 28px;
+    font-weight: bold;
+    float: right; /* Keep float for alignment */
+    position: absolute; /* Use absolute to ensure it's placed correctly */
+    top: 10px;  /* Adjust based on your modal's design */
+    right: 20px;  /* Adjust spacing from the right */
+}
+
+.form-close:hover,
+.form-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.btn-secondary {
+    margin-top: 25px;
+    padding: 6px 12px;
+    border: none;   
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    align-items: center;
+    gap: 4px;
+    background-color: #3498db;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    margin: 8% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 350px;
+    background-color: #4CAF50;
+    position: relative;
+}
+h2{
+    color: #f4f4f4;
+    text-align: center;
+}
+
+
+
+/* Device Screen sizes */
+@media screen and (max-width: 1024px) {
+    #dashBoard {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .close {
+        display: none;
+    }
+}
+
+
+/* For small screens */
+@media screen and (max-width: 889px){
+    #dashBoard {
+        grid-template-columns: 1fr;
+    }
+    /* Hamburger icon is shown */
+    .navbar2 a.icon {
+        display: block;
+    }
+
+    #navbar {
+        position: fixed;
+        left: -100%; /* Hidden by default */
+        width: 35%;
+        height: 100%;
+        top: 0;
+        transition: 0.3s;
+    }
+
+    #navbar.open {
+        left: 0; /* Navbar appears when open */
+    }
+
+    /* Adjust system dashBoard content when navbar is collapsed */
+    #systemContent {
+        margin-left: 0;
+        width: auto;
+    }
+
+    table {
+        border: 0;
+    }
+    table caption {
+        font-size: 1.3em;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    .action-buttons {
+        justify-content: flex-end;
+        margin-top: 8px;
+    }
+
+}
+
+/* Navbar behavior for small screens (320px - 480px) */
+@media screen and (max-width: 480px) {
+    /* General styling for the navbar */
+    .navbar2 {
+        padding: 10px;
+    }
+
+    /* Reduce padding and margin for the content */
+    #systemContent {
+        margin-left: 0; /* No margin for smaller screens */
+        padding: 10px; /* Compact padding */
+    }
+
+    /* Adjust the font sizes for small screens */
+    #dashBoard h4, #dashBoard h2 {
+        font-size: 1rem;
+    }
+
+    /* Hide the navbar off-screen initially */
+    #navbar {
+        position: fixed;
+        left: -100%; /* Off-screen by default */
+        width: 70%; /* Set a percentage width to fit within smaller screens */
+        height: 100%;
+        top: 0;
+        transition: 0.3s ease-in-out; /* Smooth transition for navbar */
+    }
+
+    /* When the navbar is open, show it fully */
+    #navbar.open {
+        left: 0; /* Slide the navbar in from the left */
+    }
+
+    /* Adjust the close button */
+    .close {
+        display: block; /* Ensure the close button is visible */
+        font-size: 24px;
+        color: #fff;
+    }
+}
+
+
+#violationFormContainer {
+    display: none;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+  
+.form-container {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+  
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.form-column {
+    flex: 1;
+}
+  
+.violationLabel {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.inPUT, .seLect {
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
